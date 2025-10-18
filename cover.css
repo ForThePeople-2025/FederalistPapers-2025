@@ -2,23 +2,26 @@
    Custom Scrollbar (Right Side)
 ------------------------------ */
 body {
-  overflow-y: scroll; /* always show scrollbar on right */
+  font-family: 'Cormorant Garamond', serif; /* elegant, readable */
+  background-color: #f3e9ce; /* parchment tone */
+  color: #3e2f1c;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll; /* always show vertical scrollbar */
 }
 
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
-
 ::-webkit-scrollbar-track {
-  background: #f3e9ce; /* parchment tone */
+  background: #f3e9ce;
   border-left: 1px solid #d8c79a;
 }
-
 ::-webkit-scrollbar-thumb {
   background: #b59b74;
   border-radius: 5px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background: #8c744f;
 }
