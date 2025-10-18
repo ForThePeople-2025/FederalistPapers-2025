@@ -1,0 +1,1 @@
+The Federalist Papers, backing the decision of the citizens of the U.S.A to create a single country made up of united states, is still viable, but difficult to decipher. This is a transcription made for the common person, as young as 12 years old.
