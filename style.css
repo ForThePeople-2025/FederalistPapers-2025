@@ -1,82 +1,81 @@
-/* ------------------------------
-   Base & reset
------------------------------- */
-* {
-  box-sizing: border-box;
+/* Base styling */
+body {
+  font-family: 'Garamond', serif;
+  background-color: #f8f3e7;
+  background-image: url('https://www.transparenttextures.com/patterns/aged-paper.png');
+  background-repeat: repeat;
+  color: #2c1b10;
   margin: 0;
   padding: 0;
+  line-height: 1.7;
 }
 
-body {
-  font-family: "Cormorant Garamond", "Georgia", serif;
-  background-color: #fdf6e3; /* parchment-like */
-  color: #3e2f1c; /* dark sepia */
-  line-height: 1.6;
+/* Header */
+header {
+  background-color: rgba(255, 250, 240, 0.85);
   text-align: center;
-  padding: 50px 20px;
+  padding: 1.5rem;
+  border-bottom: 2px solid #c1a875;
 }
 
-/* ------------------------------
-   Container
------------------------------- */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #e1d8c3;
-  background: #fcf5e0;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  border-radius: 8px;
-}
-
-/* ------------------------------
-   Header
------------------------------- */
 header h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
-}
-
-header h2 {
-  font-size: 1.8rem;
-  font-style: italic;
-  margin-bottom: 10px;
-  color: #5b4636;
-}
-
-.subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  font-style: italic;
+  font-size: 2rem;
   letter-spacing: 1px;
+  margin-bottom: 0.3rem;
 }
 
-/* ------------------------------
-   Intro section
------------------------------- */
-.intro p {
+header p {
+  font-style: italic;
   font-size: 1.1rem;
-  margin-bottom: 20px;
-  text-align: justify;
+  color: #4b3a2d;
 }
 
-/* ------------------------------
-   Footer
------------------------------- */
+/* Essay text */
+.essay-text {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(60, 40, 10, 0.1);
+}
+
+/* Decorative divider */
+.divider {
+  width: 200px;
+  height: 2px;
+  background-color: #c1a875;
+  margin: 2rem auto;
+  border-radius: 2px;
+}
+
+/* Navigation links (Next/Back) */
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #5a422b;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.nav-links a:hover {
+  color: #c1913f;
+  text-shadow: 0 0 3px rgba(193, 145, 63, 0.5);
+}
+
+/* Footer */
 footer {
-  margin-top: 40px;
+  text-align: center;
+  padding: 1rem;
   font-size: 0.9rem;
-  color: #74614a;
-}
-
-.scrollable {
-  max-height: 500px; /* adjust as needed */
-  overflow-y: auto;
-  padding-right: 10px; /* for scrollbar spacing */
-  border: 1px solid #d4c3a1;
-  background-color: #fdf8f0;
-  padding: 20px;
-  border-radius: 8px;
+  color: #4b3a2d;
+  background-color: rgba(255, 250, 240, 0.85);
+  border-top: 2px solid #c1a875;
 }
