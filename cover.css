@@ -10,6 +10,17 @@ body {
   overflow-y: scroll; /* always show vertical scrollbar */
 }
 
+/* Leave space for the left navbar */
+.container {
+  margin-left: 240px;  /* same width as navbar + some padding */
+  padding: 40px;       /* keeps content from touching edges */
+}
+
+
+.navbar.open ~ .container {
+  filter: brightness(0.8); /* subtle dim behind drawer */
+}
+
 /*--------------
 Custom Scrollbar for Article List 
 ---------------*/
@@ -115,18 +126,3 @@ Custom Scrollbar for Article List
 .nav-toggle:hover {
   background-color: #c2ab7e;
 }
-
-/* ------------------------------
-   Overlay Drawer Effect ??? maybe idk
------------------------------- */
-/* Leave space for the left navbar */
-.container {
-  margin-left: 240px;  /* same width as navbar + some padding */
-  padding: 40px;       /* keeps content from touching edges */
-}
-
-
-.navbar.open ~ .container {
-  filter: brightness(0.8); /* subtle dim behind drawer */
-}
-
