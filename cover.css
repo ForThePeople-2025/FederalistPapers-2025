@@ -91,12 +91,13 @@ body {
 }
 
 /* ------------------------------
-   Adjust Main Container (for Navbar)
+   Overlay Drawer Effect
 ------------------------------ */
 .container {
-  transition: margin-left 0.3s ease;
+  transition: filter 0.3s ease;
 }
 
 .navbar.open ~ .container {
-  margin-left: 220px;
+  filter: brightness(0.8); /* subtle dim behind drawer */
 }
+
