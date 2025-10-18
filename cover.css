@@ -17,38 +17,44 @@ body {
 }
 
 /* Custom Scrollbar for Article List */
+/* ------------------------------
+   Enhanced Scrollable Article List
+------------------------------ */
 .scrollable {
-  max-height: 400px;
-  overflow-y: auto;
-  padding: 10px;
-  background-color: #fffef5; /* lighter cream/near-white */
-  width: 60%;
-  margin: 0 auto;
-  border-radius: 5px;
-  border: 1px solid #e0d8b0;
+  max-height: 350px;               /* slightly shorter for desktop */
+  overflow-y: auto;                /* vertical scroll */
+  padding: 15px 20px;              /* more breathing room inside */
+  background-color: #fffdf2;       /* light cream/near-white */
+  width: 55%;                       /* a bit narrower on desktop */
+  margin: 20px auto;               /* center horizontally with some vertical spacing */
+  border-radius: 8px;              /* softer edges */
+  border: 1px solid #e0d8b0;      /* subtle border for contrast */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* subtle shadow for depth */
+  transition: all 0.2s ease;
 }
 
-/* Scrollbar Styling */
+/* Hover effect for better visual depth */
+.scrollable:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Adjust scrollbars for elegance */
 .scrollable::-webkit-scrollbar {
   width: 6px;
 }
 
 .scrollable::-webkit-scrollbar-track {
-  background: #fffef5;
-  border-left: 1px solid #d8c79a;
+  background: #fffdf2;
   border-radius: 4px;
-  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
 }
 
 .scrollable::-webkit-scrollbar-thumb {
   background: #b59b74;
   border-radius: 3px;
-  box-shadow: inset 0 0 3px rgba(0,0,0,0.2);
 }
 
 .scrollable::-webkit-scrollbar-thumb:hover {
   background: #8c744f;
-  box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
 }
 
 /* ------------------------------
@@ -129,15 +135,14 @@ body {
    Mobile-Friendly Adjustments
 ------------------------------ */
 @media screen and (max-width: 768px) {
-  /* Navbar collapses */
-  .navbar {
-    width: 100%;
-    height: auto;
-    position: relative;
-    box-shadow: none;
-    border-right: none;
-    display: none; /* hidden by default, toggle to show */
+  .scrollable {
+    width: 90%;                  /* almost full width on mobile */
+    max-height: 250px;           /* shorter height for mobile screens */
+    padding: 10px 15px;          /* adjust padding */
+    margin: 15px auto;           /* maintain spacing */
+    font-size: 0.95rem;          /* slightly smaller text for mobile */
   }
+}
 
   /* Navbar open shows as dropdown */
   .navbar.open {
