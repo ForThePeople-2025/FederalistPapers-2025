@@ -10,21 +10,33 @@ body {
   overflow-y: scroll; /* always show vertical scrollbar */
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
+/*--------------
+Custom Scrollbar 
+---------------*/
+.scrollable {
+  max-height: 400px;   /* sets the box height */
+  overflow-y: auto;    /* allows vertical scrolling */
+  padding-right: 5px;  /* space so text doesn't bump scrollbar */
 }
-::-webkit-scrollbar-track {
-  background: #f3e9ce;
-  border-left: 1px solid #d8c79a;
+
+/* Custom scrollbar styling */
+.scrollable::-webkit-scrollbar {
+  width: 6px; /* narrower scrollbar */
 }
-::-webkit-scrollbar-thumb {
+
+.scrollable::-webkit-scrollbar-track {
+  background: #f3e9ce; /* parchment tone */
+}
+
+.scrollable::-webkit-scrollbar-thumb {
   background: #b59b74;
-  border-radius: 5px;
+  border-radius: 3px;
 }
-::-webkit-scrollbar-thumb:hover {
+
+.scrollable::-webkit-scrollbar-thumb:hover {
   background: #8c744f;
 }
+
 
 /* ------------------------------
    Collapsible Left Navbar
