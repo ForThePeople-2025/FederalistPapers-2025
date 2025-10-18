@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Test - Federalist Papers</title>
+</head>
+<body>
+  <h1>Test Your Articles Locally</h1>
+  <ul>
+    <li><a href="articles/article1.html" target="_blank">Article 1</a></li>
+    <li><a href="articles/article2.html" target="_blank">Article 2</a></li>
+    <li><a href="articles/article3.html" target="_blank">Article 3</a></li>
+    <!-- Keep going, or just copy all 85 links -->
+  </ul>
+</body>
+</html>
