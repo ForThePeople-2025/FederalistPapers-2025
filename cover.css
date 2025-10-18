@@ -14,9 +14,14 @@ body {
 Custom Scrollbar 
 ---------------*/
 .scrollable {
-  max-height: 400px;   /* limits the height of the article list */
-  overflow-y: auto;    /* allows vertical scrolling */
-  padding-right: 5px;  /* space so text doesn't bump into scrollbar */
+  max-height: 400px;   /* keep the height */
+  overflow-y: auto;    /* enable vertical scroll */
+  padding: 10px;
+  background-color: #fffef5; /* lighter cream/near-white */
+  width: 60%;          /* make it 60% of the container width */
+  margin: 0 auto;      /* center it horizontally */
+  border-radius: 5px;  /* subtle rounded edges */
+  border: 1px solid #e0d8b0; /* subtle border for contrast */
 }
 
 /* Custom scrollbar styling */
