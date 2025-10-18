@@ -1,5 +1,5 @@
 /* ------------------------------
-   Custom Scrollbar (Right Side)
+   Body and Fonts
 ------------------------------ */
 body {
   font-family: 'Cormorant Garamond', serif; /* elegant, readable */
@@ -8,59 +8,19 @@ body {
   margin: 0;
   padding: 0;
   overflow-y: scroll; /* always show vertical scrollbar */
+  line-height: 1.6;
 }
-
-/* Leave space for the left navbar */
-.container {
-  margin-left: 240px;  /* same width as navbar + some padding */
-  padding: 40px;       /* keeps content from touching edges */
-}
-
-
-.navbar.open ~ .container {
-  filter: brightness(0.8); /* subtle dim behind drawer */
-}
-
-/*--------------
-Custom Scrollbar for Article List 
----------------*/
-.scrollable {
-  max-height: 400px;   /* keep the height */
-  overflow-y: auto;    /* enable vertical scroll */
-  padding: 10px;
-  background-color: #fffef5; /* lighter cream/near-white */
-  width: 60%;          /* make it 60% of the container width */
-  margin: 0 auto;      /* center it horizontally */
-  border-radius: 5px;  /* subtle rounded edges */
-  border: 1px solid #e0d8b0; /* subtle border for contrast */
-}
-
-/* Custom scrollbar styling */
-.scrollable::-webkit-scrollbar {
-  width: 6px;            /* narrow scrollbar */
-}
-
-.scrollable::-webkit-scrollbar-track {
-  background: #fffef5;;   /* lighter tone */
-  border-left: 1px solid #d8c79a; /* subtle border for depth */
-  border-radius: 4px;     /* rounded edges for track */
-  box-shadow: inset 0 0 5px rgba(0,0,0,0.1); /* subtle inner shadow */
-}
-
-.scrollable::-webkit-scrollbar-thumb {
-  background: #b59b74;   /* parchment-dark tone */
-  border-radius: 3px;    /* rounded edges for thumb */
-  box-shadow: inset 0 0 3px rgba(0,0,0,0.2); /* slight inset shadow for depth */
-}
-
-.scrollable::-webkit-scrollbar-thumb:hover {
-  background: #8c744f;   /* darker on hover */
-  box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
-}
-
 
 /* ------------------------------
-   Collapsible Left Navbar
+   Main container spacing
+------------------------------ */
+.container {
+  margin-left: 240px;  /* leave space for navbar */
+  padding: 40px;       /* content padding */
+}
+
+/* ------------------------------
+   Navbar
 ------------------------------ */
 .navbar {
   position: fixed;
@@ -88,6 +48,7 @@ Custom Scrollbar for Article List
   color: #5b4636;
   margin: 8px 0;
   font-size: 1.1rem;
+  transition: all 0.2s ease;
 }
 
 .navbar a:hover {
@@ -103,7 +64,6 @@ Custom Scrollbar for Article List
 .navbar .dropdown a {
   font-size: 1rem;
 }
-
 
 /* ------------------------------
    Navbar Toggle Button
@@ -125,4 +85,98 @@ Custom Scrollbar for Article List
 
 .nav-toggle:hover {
   background-color: #c2ab7e;
+}
+
+/* ------------------------------
+   Scrollable Article List
+------------------------------ */
+.articles-list {
+  max-height: 400px;       /* short scrollable height */
+  overflow-y: auto;
+  background-color: #fffef5;  /* light cream */
+  width: 60%;              /* narrower box */
+  margin: 20px auto;       /* center horizontally */
+  padding: 15px 20px;
+  border-radius: 8px;
+  border: 1px solid #e0d8b0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.articles-list h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.articles-list ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.articles-list li {
+  margin: 10px 0;
+}
+
+.articles-list a {
+  color: #3e2f1c;
+  text-decoration: none;
+  font-size: 1.15rem; /* slightly bigger for readability */
+  padding: 4px 6px;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.articles-list a:hover {
+  color: #8c744f;
+  background-color: rgba(200, 180, 140, 0.2); /* subtle highlight */
+  border-radius: 4px;
+}
+
+/* ------------------------------
+   Custom Scrollbar for Article List
+------------------------------ */
+.articles-list::-webkit-scrollbar {
+  width: 6px;            /* narrow scrollbar */
+}
+
+.articles-list::-webkit-scrollbar-track {
+  background: #fffef5;   /* lighter tone */
+  border-radius: 4px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+.articles-list::-webkit-scrollbar-thumb {
+  background: #b59b74;
+  border-radius: 3px;
+  box-shadow: inset 0 0 3px rgba(0,0,0,0.2);
+}
+
+.articles-list::-webkit-scrollbar-thumb:hover {
+  background: #8c744f;
+  box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+}
+
+/* ------------------------------
+   Header styles (centered & elegant)
+------------------------------ */
+.main-content header h1,
+.main-content header h2,
+.main-content header p.subtitle {
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+.main-content header h1 {
+  font-size: 3rem;
+}
+
+.main-content header h2 {
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.main-content header p.subtitle {
+  font-size: 1.2rem;
+  color: #5b4636;
 }
