@@ -1,71 +1,72 @@
-/* cover.css — clean, elegant homepage with slight parchment tone */
+/* ------------------------------
+   Base & reset
+------------------------------ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  font-family: 'Georgia', 'Garamond', serif;
-  background-color: #fdfaf5;
-  background-image: linear-gradient(180deg, #fdfaf5 0%, #f7f1e3 100%);
-  color: #2c1d0f;
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: "Cormorant Garamond", "Georgia", serif;
+  background-color: #fdf6e3; /* parchment-like */
+  color: #3e2f1c; /* dark sepia */
+  line-height: 1.6;
   text-align: center;
-  padding: 2rem;
+  padding: 50px 20px;
 }
 
-/* Main content box */
-main {
-  max-width: 600px;
-  width: 90%;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 2.5rem;
-  border-radius: 10px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+/* ------------------------------
+   Container
+------------------------------ */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #e1d8c3;
+  background: #fcf5e0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  border-radius: 8px;
 }
 
-/* Titles */
-h1 {
-  font-size: 2.6rem;
-  margin-bottom: 0.4em;
-  color: #3b2408;
+/* ------------------------------
+   Header
+------------------------------ */
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
 }
 
-p {
-  margin: 0.4em 0 1em;
+header h2 {
+  font-size: 1.8rem;
+  font-style: italic;
+  margin-bottom: 10px;
+  color: #5b4636;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+/* ------------------------------
+   Intro section
+------------------------------ */
+.intro p {
   font-size: 1.1rem;
-  color: #4a3212;
+  margin-bottom: 20px;
+  text-align: justify;
 }
 
-/* Scrollable article list */
-ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 1.5em;
-  max-height: 240px; /* shorter list */
-  overflow-y: auto;
-}
-
-li {
-  margin: 0.4em 0;
-}
-
-a {
-  text-decoration: none;
-  color: #2d4b8e;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-a:hover {
-  color: #b03a1b;
-}
-
-/* Scrollbar (subtle) */
-ul::-webkit-scrollbar {
-  width: 6px;
-}
-ul::-webkit-scrollbar-thumb {
-  background-color: #bca67a;
-  border-radius: 4px;
+/* ------------------------------
+   Footer
+------------------------------ */
+footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #74614a;
 }
