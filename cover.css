@@ -14,27 +14,32 @@ body {
 Custom Scrollbar 
 ---------------*/
 .scrollable {
-  max-height: 400px;   /* sets the box height */
+  max-height: 400px;   /* limits the height of the article list */
   overflow-y: auto;    /* allows vertical scrolling */
-  padding-right: 5px;  /* space so text doesn't bump scrollbar */
+  padding-right: 5px;  /* space so text doesn't bump into scrollbar */
 }
 
 /* Custom scrollbar styling */
 .scrollable::-webkit-scrollbar {
-  width: 6px; /* narrower scrollbar */
+  width: 8px;            /* narrow scrollbar */
 }
 
 .scrollable::-webkit-scrollbar-track {
-  background: #f3e9ce; /* parchment tone */
+  background: #f3e9ce;   /* parchment tone */
+  border-left: 1px solid #d8c79a; /* subtle border for depth */
+  border-radius: 4px;     /* rounded edges for track */
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1); /* subtle inner shadow */
 }
 
 .scrollable::-webkit-scrollbar-thumb {
-  background: #b59b74;
-  border-radius: 3px;
+  background: #b59b74;   /* parchment-dark tone */
+  border-radius: 4px;    /* rounded edges for thumb */
+  box-shadow: inset 0 0 3px rgba(0,0,0,0.2); /* slight inset shadow for depth */
 }
 
 .scrollable::-webkit-scrollbar-thumb:hover {
-  background: #8c744f;
+  background: #8c744f;   /* darker on hover */
+  box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
 }
 
 
