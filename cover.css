@@ -1,72 +1,102 @@
 /* ------------------------------
-   Base & reset
+   Custom Scrollbar (Right Side)
 ------------------------------ */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+body {
+  overflow-y: scroll; /* always show scrollbar on right */
 }
 
-body {
-  font-family: "Cormorant Garamond", "Georgia", serif;
-  background-color: #fdf6e3; /* parchment-like */
-  color: #3e2f1c; /* dark sepia */
-  line-height: 1.6;
-  text-align: center;
-  padding: 50px 20px;
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3e9ce; /* parchment tone */
+  border-left: 1px solid #d8c79a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b59b74;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8c744f;
 }
 
 /* ------------------------------
-   Container
+   Collapsible Left Navbar
+------------------------------ */
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 220px;
+  background-color: #f8f1dc;
+  border-right: 1px solid #d8c79a;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.navbar.open {
+  transform: translateX(0);
+}
+
+.navbar h3 {
+  font-family: "Cormorant Garamond", serif;
+  color: #3e2f1c;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #d8c79a;
+  padding-bottom: 5px;
+}
+
+.navbar a {
+  display: block;
+  text-decoration: none;
+  color: #5b4636;
+  margin: 10px 0;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #8c744f;
+}
+
+/* ------------------------------
+   Navbar Toggle Button
+------------------------------ */
+.nav-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #d8c79a;
+  border: none;
+  color: #3e2f1c;
+  padding: 10px 14px;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1100;
+  transition: background-color 0.2s ease;
+}
+
+.nav-toggle:hover {
+  background-color: #c2ab7e;
+}
+
+/* ------------------------------
+   Adjust Main Container (for Navbar)
 ------------------------------ */
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #e1d8c3;
-  background: #fcf5e0;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  border-radius: 8px;
+  transition: margin-left 0.3s ease;
 }
 
-/* ------------------------------
-   Header
------------------------------- */
-header h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
-}
-
-header h2 {
-  font-size: 1.8rem;
-  font-style: italic;
-  margin-bottom: 10px;
-  color: #5b4636;
-}
-
-.subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  font-style: italic;
-  letter-spacing: 1px;
-}
-
-/* ------------------------------
-   Intro section
------------------------------- */
-.intro p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  text-align: justify;
-}
-
-/* ------------------------------
-   Footer
------------------------------- */
-footer {
-  margin-top: 40px;
-  font-size: 0.9rem;
-  color: #74614a;
+.navbar.open ~ .container {
+  margin-left: 220px;
 }
