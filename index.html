@@ -4,63 +4,149 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Federalist Papers (2025)</title>
-  <link rel="stylesheet" href="/cover.css">
+  <link rel="stylesheet" href="cover.css">
+  <style>
+    /* ------------------------------
+       Basic Cover Page Styles
+    ------------------------------ */
+    body {
+      font-family: 'Cormorant Garamond', serif;
+      background-color: #f3e9ce;
+      color: #3e2f1c;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header h2 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #5b4636;
+    }
+
+    .intro p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .articles-list {
+      max-height: 400px;
+      overflow-y: auto;
+      background-color: #fffef5;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #e0d8b0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      margin: 0 auto 40px auto;
+      width: 60%;
+    }
+
+    .articles-list ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .articles-list li {
+      margin: 10px 0;
+    }
+
+    .articles-list a {
+      text-decoration: none;
+      color: #5b4636;
+      font-size: 1.1rem;
+      transition: color 0.2s ease;
+    }
+
+    .articles-list a:hover {
+      color: #8c744f;
+    }
+
+    /* Scrollbar styling */
+    .articles-list::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .articles-list::-webkit-scrollbar-track {
+      background: #fffef5;
+      border-radius: 4px;
+    }
+
+    .articles-list::-webkit-scrollbar-thumb {
+      background: #b59b74;
+      border-radius: 3px;
+    }
+
+    .articles-list::-webkit-scrollbar-thumb:hover {
+      background: #8c744f;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #5b4636;
+      margin-top: 40px;
+    }
+
+    /* Responsive for mobile */
+    @media screen and (max-width: 768px) {
+      .articles-list {
+        width: 90%;
+        max-height: 250px;
+        padding: 15px;
+      }
+
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      header h2 {
+        font-size: 1.3rem;
+      }
+
+      .intro p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
-  
 <body>
-  <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
-  
-  <nav class="navbar">
-    <a href="index.html">Home</a>
-    <p> </p>
-    <p> </p>
-    <a href="#" class="dropdown-toggle">Articles ▼</a>
-    <div class="dropdown">
-    <a href="articles/article1.html">Article No. 1</a>
-    <a href="articles/article2.html">Article No. 2</a>
-    <a href="articles/article3.html">Article No. 3</a>
-    <a href="articles/article4.html">Article No. 4</a>
-    <a href="articles/article5.html">Article No. 5</a>
-    </div>
-    
-    <a href="about.html">About</a>
-  </nav>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-  dropdownToggles.forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      const dropdown = toggle.nextElementSibling;
-      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-    });
-  });
-});
-</script>
-
-  
   <div class="container">
     <header>
       <h1>The Federalist Papers</h1>
       <h2>2025 Edition</h2>
-      <p class="subtitle">For the People.</p>
+      <p class="subtitle">For the People</p>
     </header>
 
     <section class="intro">
-      <p>
-        Welcome to the modern edition of <em>The Federalist Papers</em>, 
-        where the timeless wisdom of the 85 essays is preserved and 
-        presented for a new generation. 
-      </p>
-      <p>
-        Explore each essay in full, written in the style of the original 
-        colonial documents, with a slightly modernized readability.
-      </p>
+      <p>Welcome to the modern edition of <em>The Federalist Papers</em>, where the timeless wisdom of the 85 essays is preserved for a new generation.</p>
+      <p>Explore each essay in full, written in the style of the original colonial documents, with slightly modernized readability for today’s readers.</p>
     </section>
 
-    <section class="articles-list scrollable">
-      <h2>Read the Articles</h2>
+    <section class="articles-list">
+      <h2 style="text-align:center; margin-bottom:15px;">Read the Articles</h2>
       <ul>
         <li><a href="articles/article1.html">Federalist Paper #1 - Adapted by K. Hamilton</a></li>
         <li><a href="articles/article2.html">Federalist Paper #2 - Adapted by P. Madison</a></li>
@@ -74,68 +160,12 @@ document.addEventListener('DOMContentLoaded', () => {
         <li><a href="articles/article10.html">Federalist Paper #10 - Adapted by K. Hamilton</a></li>
         <li><a href="articles/article11.html">Federalist Paper #11 - Adapted by P. Madison</a></li>
         <li><a href="articles/article12.html">Federalist Paper #12 - Adapted by M. Jay</a></li>
-        <li><a href="articles/article13.html">Federalist Paper #13 - Adapted by K. Hamilton</a></li>
-        <li><a href="articles/article14.html">Federalist Paper #14 - Adapted by P. Madison</a></li>
-        <li><a href="articles/article15.html">Federalist Paper #15 - Adapted by M. Jay</a></li>
-        <li><a href="articles/article16.html">Federalist Paper #16 - Adapted by K. Hamilton</a></li>
-        <li><a href="articles/article17.html">Federalist Paper #17 - Adapted by P. Madison</a></li>
-        <li><a href="articles/article18.html">Federalist Paper #18 - Adapted by M. Jay</a></li>
-        <li><a href="articles/article19.html">Federalist Paper #19 - Adapted by K. Hamilton</a></li>
-        <li><a href="articles/article20.html">Federalist Paper #20 - Adapted by P. Madison</a></li>
-        <li><a href="articles/article21.html">Federalist Paper #21 - Adapted by M. Jay</a></li>
-        <li><a href="articles/article22.html">Federalist Paper #22 - Adapted by K. Hamilton</a></li>
-        <li><a href="articles/article23.html">Federalist Paper #23 - Adapted by P. Madison</a></li>
-        <li><a href="articles/article24.html">Federalist Paper #24 - Adapted by M. Jay</a></li>
-        <li><a href="articles/article25.html">Federalist Paper #25 - Adapted by K. Hamilton</a></li>
-        <li><a href="articles/article26.html">Federalist Paper #26 - Adapted by P. Madison</a></li>
-        <li><a href="articles/article27.html">Federalist Paper #27 - Adapted by M. Jay</a></li>
-        <li><a href="articles/article28.html">Federalist Paper #28 - Adapted by K. Hamilton</a></li>
-        <li><a href="articles/article29.html">Federalist Paper #29 - Adapted by P. Madison</a></li>
-        <li><a href="articles/article30.html">Federalist Paper #30 - Adapted by M. Jay</a></li>
-        <li><a href="articles/article31.html">Federalist Paper #31 - Adapted by K. Hamilton</a></li>
-        <li><a href="articles/article32.html">Federalist Paper #32 - Adapted by P. Madison</a></li>
-        <li><a href="articles/article33.html">Federalist Paper #33 - Adapted by M. Jay</a></li>
-        <li><a href="articles/article34.html">Federalist Paper #34 - Adapted by K. Hamilton</a></li>
-        <li><a href="articles/article35.html">Federalist Paper #35 - Adapted by P. Madison</a></li>
-        <li><a href="articles/article36.html">Federalist Paper #36 - Adapted by M. Jay</a></li>
-        <li><a href="articles/article37.html">Federalist Paper #37 - Adapted by K. Hamilton</a></li>
-        <li><a href="articles/article38.html">Federalist Paper #38 - Adapted by P. Madison</a></li>
-        <li><a href="articles/article39.html">Federalist Paper #39 - Adapted by M. Jay</a></li>
-        <li><a href="articles/article40.html">Federalist Paper #40 - Adapted by K. Hamilton</a></li>
-        <li><a href="articles/article41.html">Federalist Paper #41 - Adapted by P. Madison</a></li>
-        <li><a href="articles/article42.html">Federalist Paper #42 - Adapted by M. Jay</a></li>
-        <li><a href="articles/article43.html">Federalist Paper #43 - Adapted by K. Hamilton</a></li>
-        <li><a href="articles/article44.html">Federalist Paper #44 - Adapted by P. Madison</a></li>
-        <li><a href="articles/article45.html">Federalist Paper #45 - Adapted by M. Jay</a></li>
-        <li><a href="articles/article46.html">Federalist Paper #46 - Adapted by K. Hamilton</a></li>
-        <li><a href="articles/article47.html">Federalist Paper #47 - Adapted by P. Madison</a></li>
-        <li><a href="articles/article48.html">Federalist Paper #48 - Adapted by M. Jay</a></li>
-        <li><a href="articles/article49.html">Federalist Paper #49 - Adapted by K. Hamilton</a></li>
-        <li><a href="articles/article50.html">Federalist Paper #50 - Adapted by P. Madison</a></li>
-        <li><a href="articles/article51.html">Federalist Paper #51 - Adapted by M. Jay</a></li>
-        <li><a href="articles/article52.html">Federalist Paper #52 - Adapted by K. Hamilton</a></li>
-        <li><a href="articles/article53.html">Federalist Paper #53 - Adapted by P. Madison</a></li>
-        <li><a href="articles/article54.html">Federalist Paper #54 - Adapted by M. Jay</a></li>
-        <li><a href="articles/article55.html">Federalist Paper #55 - Adapted by K. Hamilton</a></li>
-        <!-- continue thru 85 -->
       </ul>
-</section>
+    </section>
 
     <footer>
-      <p>© 2025 ForThePeople.ink</p>
+      <p>© 2025 ForThePeople.ink — Modern Adaptation Project</p>
     </footer>
   </div>
-  
-  <script>
-  function toggleNav() {
-    const navbar = document.getElementById("navbar");
-    const body = document.body;
-    navbar.classList.toggle("open");
-    body.classList.toggle("nav-open");
-  }
-  </script>
-</body>
-</html>
-
 </body>
 </html>
