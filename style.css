@@ -1,0 +1,18 @@
+body {
+  font-family: sans-serif;
+  background-color: #fefefe;
+  color: #111;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  color: #1f6feb;
+}
+
+p {
+  max-width: 600px;
+  margin: 10px auto;
+  line-height: 1.5;
+}
