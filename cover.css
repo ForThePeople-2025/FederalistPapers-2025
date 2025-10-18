@@ -95,11 +95,14 @@ body {
 }
 
 /* ------------------------------
-   Overlay Drawer Effect
+   Overlay Drawer Effect ??? maybe idk
 ------------------------------ */
+/* Leave space for the left navbar */
 .container {
-  transition: filter 0.3s ease;
+  margin-left: 240px;  /* same width as navbar + some padding */
+  padding: 40px;       /* keeps content from touching edges */
 }
+
 
 .navbar.open ~ .container {
   filter: brightness(0.8); /* subtle dim behind drawer */
