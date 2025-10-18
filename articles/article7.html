@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Federalist Paper #7 - 2025 Edition</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <button id="menuBtn" class="nav-toggle" aria-expanded="false">☰ Menu</button>
+    <nav id="topMenu" class="top-menu" aria-hidden="true" style="display:none;">
+      <a href="../index.html">Home</a>
+      <a href="article1.html">Article 1</a>
+      <a href="article2.html">Article 2</a>
+      <a href="article3.html">Article 3</a>
+      <a href="article4.html">Article 4</a>
+      <a href="article5.html">Article 5</a>
+      <a href="article6.html">Article 6</a>
+      <a href="article7.html">Article 7</a>
+      <a href="article8.html">Article 8</a>
+      <a href="article9.html">Article 9</a>
+      <a href="article10.html">Article 10</a>
+      <a href="article11.html">Article 11</a>
+      <a href="article12.html">Article 12</a>
+    </nav>
+
+    <header>
+      <h1>The Federalist Papers</h1>
+      <h3>(2025 Edition)</h3>
+    </header>
+
+    <div class="essay-text">
+      <h2>Article No. 7</h2>
+      <p>"States already squabble over land and trade — without a national government this will only get worse. A strong federal system helps settle disputes fairly and keeps everyone focused on progress rather than conflict."</p>
+      <div class="divider"></div>
+      <p class="subtitle">Adapted by K. Hamilton</p>
+    </div>
+
+    <div class="nav-links">
+      <a href="article6.html">⬅ Previous Article</a>
+      <a href="article8.html">Next Article ➡</a>
+    </div>
+
+    <footer>
+      <p><a href="../index.html">← Back to Cover Page</a></p>
+      <p>© 2025 ForThePeople.ink — Modern Adaptation Project</p>
+    </footer>
+  </div>
+
+  <script>
+    const btn7 = document.getElementById('menuBtn');
+    const menu7 = document.getElementById('topMenu');
+    btn7.addEventListener('click', () => {
+      const isOpen = menu7.style.display === 'block';
+      menu7.style.display = isOpen ? 'none' : 'block';
+      btn7.setAttribute('aria-expanded', !isOpen);
+      menu7.setAttribute('aria-hidden', isOpen);
+    });
+  </script>
+</body>
+</html>
