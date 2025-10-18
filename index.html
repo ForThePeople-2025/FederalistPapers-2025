@@ -10,25 +10,35 @@
 <body>
   <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
   
-  <nav class="navbar" id="navbar">
+  <nav class="navbar">
     <h3>Navigation</h3>
-    <button class="close-nav" onclick="toggleNav()">✕ Close</button>
     <a href="index.html">Home</a>
+    <a href="#" class="dropdown-toggle">Articles ▼</a>
+    <div class="dropdown">
     <a href="articles/article1.html">Article No. 1</a>
     <a href="articles/article2.html">Article No. 2</a>
     <a href="articles/article3.html">Article No. 3</a>
     <a href="articles/article4.html">Article No. 4</a>
     <a href="articles/article5.html">Article No. 5</a>
+    </div>
+    
     <a href="about.html">About</a>
   </nav>
 
 
-  <script>
-  function toggleNav() {
-    document.getElementById("navbar").classList.toggle("open");
-  }
-  </script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const dropdown = toggle.nextElementSibling;
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+});
+</script>
 
+  
   <div class="container">
     <header>
       <h1>The Federalist Papers</h1>
