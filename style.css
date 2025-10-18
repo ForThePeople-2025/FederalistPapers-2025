@@ -70,3 +70,13 @@ footer {
   font-size: 0.9rem;
   color: #74614a;
 }
+
+.scrollable {
+  max-height: 500px; /* adjust as needed */
+  overflow-y: auto;
+  padding-right: 10px; /* for scrollbar spacing */
+  border: 1px solid #d4c3a1;
+  background-color: #fdf8f0;
+  padding: 20px;
+  border-radius: 8px;
+}
