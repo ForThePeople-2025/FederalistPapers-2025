@@ -11,7 +11,7 @@ body {
 }
 
 /*--------------
-Custom Scrollbar 
+Custom Scrollbar for Article List 
 ---------------*/
 .scrollable {
   max-height: 400px;   /* keep the height */
@@ -26,11 +26,11 @@ Custom Scrollbar
 
 /* Custom scrollbar styling */
 .scrollable::-webkit-scrollbar {
-  width: 8px;            /* narrow scrollbar */
+  width: 6px;            /* narrow scrollbar */
 }
 
 .scrollable::-webkit-scrollbar-track {
-  background: #f3e9ce;   /* parchment tone */
+  background: #fffef5;;   /* lighter tone */
   border-left: 1px solid #d8c79a; /* subtle border for depth */
   border-radius: 4px;     /* rounded edges for track */
   box-shadow: inset 0 0 5px rgba(0,0,0,0.1); /* subtle inner shadow */
@@ -38,7 +38,7 @@ Custom Scrollbar
 
 .scrollable::-webkit-scrollbar-thumb {
   background: #b59b74;   /* parchment-dark tone */
-  border-radius: 4px;    /* rounded edges for thumb */
+  border-radius: 3px;    /* rounded edges for thumb */
   box-shadow: inset 0 0 3px rgba(0,0,0,0.2); /* slight inset shadow for depth */
 }
 
