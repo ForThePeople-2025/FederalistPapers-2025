@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Federalist Paper #3 - 2025 Edition</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  
+<body>
+  <div class="container">
+    <header>
+      <h1>The Federalist Papers</h1>
+      <h3>(2025 Edition)</h3>
+    </header>
+
+    <div class="essay-text">
+      <h2>Article No. 3</h2>
+      
+      <p>"A united country makes it easier to handle foreign threats. If the states act alone, they might get into wars or conflicts that hurt everyone."</p>
+      <p>"By having a strong central government, the nation can defend itself and maintain peace better than the states could individually."</p>
+      
+      <div class="divider"></div>
+      <p class="subtitle">Adapted by M. Jay</p>
+    </div>
+
+    <div class="nav-links">
+      <a href="article2.html">⬅ Back</a>
+      <a href="article4.html">Next ➡</a>
+    </div>
+    
+    <footer>
+      <p><a href="../index.html">← Back to Cover Page</a></p>
+      <p>© 2025 ForThePeople.ink — Modern Adaptation Project</p>
+    </footer>
+  </div>
+</body>
+</html>
