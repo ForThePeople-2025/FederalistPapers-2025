@@ -51,6 +51,13 @@ header p {
   line-height: 1.6;        /* makes it more readable */
 }
 
+.subtitle {
+  font-size: 1rem;
+  font-style: italic;
+  text-align: center;      /* also center the subtitle under the article */
+  margin-top: 10px;
+}
+
 /* Decorative divider */
 .divider {
   width: 200px;
