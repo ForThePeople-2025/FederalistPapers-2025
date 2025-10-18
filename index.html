@@ -8,6 +8,22 @@
 </head>
   
 <body>
+  <button class="nav-toggle" onclick="toggleNav()">☰ Menu</button>
+
+  <nav class="navbar" id="navbar">
+    <h3>Navigation</h3>
+    <a href="index.html">Home</a>
+    <a href="essay1.html">Essay 1</a>
+    <a href="essay2.html">Essay 2</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <script>
+  function toggleNav() {
+    document.getElementById("navbar").classList.toggle("open");
+  }
+  </script>
+
   <div class="container">
     <header>
       <h1>The Federalist Papers</h1>
