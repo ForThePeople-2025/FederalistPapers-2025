@@ -40,6 +40,17 @@ header p {
   box-shadow: 0 0 10px rgba(60, 40, 10, 0.1);
 }
 
+.essay-text h2 {
+  text-align: center;      /* centers the title */
+  font-size: 2rem;         /* optional: make it bigger than default */
+  margin-bottom: 20px;     /* space below the title */
+}
+
+.essay-text p {
+  font-size: 1.2rem;       /* bigger, easier to read */
+  line-height: 1.6;        /* makes it more readable */
+}
+
 /* Decorative divider */
 .divider {
   width: 200px;
