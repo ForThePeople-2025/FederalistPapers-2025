@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Federalist Paper #5 - 2025 Edition</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Simple Top Menu Toggle -->
+    <button id="menuBtn" class="nav-toggle" aria-expanded="false">☰ Menu</button>
+    <nav id="topMenu" class="top-menu" aria-hidden="true" style="display:none;">
+      <a href="../index.html">Home</a>
+      <a href="article1.html">Article 1</a>
+      <a href="article2.html">Article 2</a>
+      <a href="article3.html">Article 3</a>
+      <a href="article4.html">Article 4</a>
+      <a href="article5.html">Article 5</a>
+      <a href="article6.html">Article 6</a>
+      <a href="article7.html">Article 7</a>
+      <a href="article8.html">Article 8</a>
+      <a href="article9.html">Article 9</a>
+      <a href="article10.html">Article 10</a>
+      <a href="article11.html">Article 11</a>
+      <a href="article12.html">Article 12</a>
+    </nav>
+
+    <header>
+      <h1>The Federalist Papers</h1>
+      <h3>(2025 Edition)</h3>
+    </header>
+
+    <div class="essay-text">
+      <h2>Article No. 5</h2>
+      <p>"If the states split into separate countries, history shows they often end up fighting one another. Keeping the states together under a common government helps avoid those conflicts and keeps peace among the people."</p>
+      <div class="divider"></div>
+      <p class="subtitle">Adapted by P. Madison</p>
+    </div>
+
+    <div class="nav-links">
+      <a href="article4.html">⬅ Previous Article</a>
+      <a href="article6.html">Next Article ➡</a>
+    </div>
+
+    <footer>
+      <p><a href="../index.html">← Back to Cover Page</a></p>
+      <p>© 2025 ForThePeople.ink — Modern Adaptation Project</p>
+    </footer>
+  </div>
+
+  <script>
+    const btn5 = document.getElementById('menuBtn');
+    const menu5 = document.getElementById('topMenu');
+    btn5.addEventListener('click', () => {
+      const isOpen = menu5.style.display === 'block';
+      menu5.style.display = isOpen ? 'none' : 'block';
+      btn5.setAttribute('aria-expanded', !isOpen);
+      menu5.setAttribute('aria-hidden', isOpen);
+    });
+  </script>
+</body>
+</html>
